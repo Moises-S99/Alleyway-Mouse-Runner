@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+    min-height: 100%;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    background-color: #020617;
+    color: #f8fafc;
+    touch-action: manipulation;
+    overscroll-behavior-y: contain;
+    overflow-x: hidden;
+  }
+
+  body {
+    height: 100%;
+    min-height: 100%;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    background-color: #020617;
+    color: #f8fafc;
+    touch-action: manipulation;
+    overscroll-behavior-y: contain;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    height: 100%;
+    min-height: 100%;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* Safe Area Insets for Mobile Notches, Punch Holes & Gesture Bars */
+.safe-top {
+  padding-top: max(env(safe-area-inset-top, 0px), 6px);
+}
+
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 6px);
+}
+
+.safe-left {
+  padding-left: max(env(safe-area-inset-left, 0px), 6px);
+}
+
+.safe-right {
+  padding-right: max(env(safe-area-inset-right, 0px), 6px);
+}
+
+/* Dynamic Viewport Height Utilities */
+.h-dvh {
+  height: 100vh;
+  height: 100dvh;
+}
+
+.min-h-dvh {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.max-h-dvh {
+  max-height: 100vh;
+  max-height: 100dvh;
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+/* Mobile Landscape Optimization (ensures game fits in full landscape screen) */
+@media (max-height: 520px) and (orientation: landscape) {
+  .landscape-compact-header {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+  .landscape-compact-nav {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+}

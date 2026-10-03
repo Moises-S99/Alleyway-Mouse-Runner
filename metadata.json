@@ -1,0 +1,6 @@
+{
+  "name": "Alleyway Mouse Runner Mobile",
+  "description": "Juego endless runner arcade optimizado para dispositivos móviles Android con base de datos local robusta (IndexedDB), modo sin conexión (PWA/APK) y controles táctiles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
